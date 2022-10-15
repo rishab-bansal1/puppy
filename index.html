@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+     <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+     <ul>
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a  href="puppy.html">Puppy Images</a></li>
+      <li><a href="search.html">Search</a></li>
+    </ul>
+
+    <div id="container">
+      <div id="card"></div>
+    </div>
+
+    
+
+    <script>
+      async function allDogs() {
+        const response = await fetch("https://dog.ceo/api/breeds/list/all");
+        const data = await response.json();
+        createCard(data.message);
+        console.log(data);
+      }
+      allDogs();
+      function createCard(breedList) {
+       
+        document.getElementById("card").innerHTML = `${Object.keys(breedList)
+          .map(function (breed) {
+            return `<div id="card" style="cursor: pointer;"> <h2>${breed}</h2> </div>`;
+          })
+          .join("")}` ;
+        //   var click=document.getElementById("card");
+        //   click.style.cursor = 'pointer';
+        //   click.onclick=console.log("click on button")
+        
+      }
+
+       
+    </script>
+  </body>
+</html>

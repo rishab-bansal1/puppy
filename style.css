@@ -1,0 +1,76 @@
+ #card {
+        display: inline-block;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        border-radius: 5px;
+        margin: 10px;
+        border: 10px;
+        padding: 10px;
+        border: 1px solid black;
+      }
+
+      #card:hover {
+        box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.2);
+      }
+
+       #imgCard {
+       display: inline-block;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        border-radius: 5px;
+        margin: 10px;
+        border: 10px;
+        padding: 10px;
+        border: 1px solid black;
+      }
+       #imgCard:hover {
+        box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.2);
+      }
+       #imgCard> img {
+        width: 200px;
+       }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #04aa6d;
+}
+
+.active {
+  background-color: #04aa6d;
+}
+
+
+input[type=text] {
+  padding: 6px;
+  margin-top: 18px;
+  font-size: 17px;
+  border: 1px solid black;
+}
+button {
+  padding: 6px;
+  margin-top: 18px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
